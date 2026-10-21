@@ -64,3 +64,6 @@ packages/design/styles/src/tokens.generated.css
 # Docs site cache
 .vitepress/cache/
 docs/.vitepress/cache/
+
+# Vite 临时配置缓存
+*.timestamp-*
