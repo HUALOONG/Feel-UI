@@ -1,0 +1,30 @@
+{
+  "name": "@feel-ui/hooks",
+  "version": "0.1.0",
+  "description": "Feel UI 跨框架共享逻辑核心：ID 生成、可受控状态、插槽合并（框架无关，由 Vue/React 适配层消费）",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@feel-ui/tsconfig": "workspace:*",
+    "@feel-ui/vite": "workspace:*",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  }
+}

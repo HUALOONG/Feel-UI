@@ -1,0 +1,30 @@
+{
+  "name": "@feel-ui/cva",
+  "version": "0.1.0",
+  "description": "Feel UI 组件变体管理：基于 props 值动态生成 CSS 类名",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "devDependencies": {
+    "@feel-ui/tsconfig": "workspace:*",
+    "@feel-ui/vite": "workspace:*",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  }
+}
