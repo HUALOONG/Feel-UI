@@ -4,7 +4,7 @@
 同时提供 **Vue 3** 与 **React 19** 两套组件包。
 
 > Feel UI 是安徽九问信息科技有限公司推出的跨框架 UI 组件库。
-> 产品英文名 **Feel UI**，中文名 **栖羽**——取"栖于界面之上"之意，
+> 产品英文名 **Feel UI**，中文名 **栖羽**——取“栖于界面之上”之意，
 > 遵循 [Shadcn UI](https://ui.shadcn.com/) 的设计理念与交互规范，基于 `Tailwind CSS` + 设计令牌驱动样式，
 > 采用 `pnpm` Monorepo 统一管理，配置收敛、开箱即用。
 
@@ -279,10 +279,8 @@ feel-ui/
 
 Vue 3 与 React 19 两套组件包采用 **独立实现、契约对齐**的策略：
 
-- 逻辑层与样式层下沉为共享包（`@feel-ui/hooks`、`@feel-ui/cva`、`@feel-ui/utils`、`@feel-ui/tokens`、`@feel-ui/styles`
-  ），两套组件包各自消费同一份逻辑与样式，避免重复；
-- 组件层分别在 `packages/frameworks/vue` 与 `packages/frameworks/react` 内实现，通过 **契约测试**保证两边的 props
-  名称、类型、默认值、样式变体（variant）与交互行为一致；
+- 逻辑层与样式层下沉为共享包（`@feel-ui/hooks`、`@feel-ui/cva`、`@feel-ui/utils`、`@feel-ui/tokens`、`@feel-ui/styles`），两套组件包各自消费同一份逻辑与样式，避免重复；
+- 组件层分别在 `packages/frameworks/vue` 与 `packages/frameworks/react` 内实现，通过 **契约测试**保证两边的 props 名称、类型、默认值、样式变体（variant）与交互行为一致；
 - 差异点仅停留在框架适配层（Vue 的 `<script setup>` + 模板 vs React 的 TSX + hooks），对外 API 保持统一。
 
 > 该机制意味着新增组件需同时在两个框架包内实现并补齐对应测试，具体流程见[组件开发约定](#组件开发约定)。
@@ -390,8 +388,7 @@ const toggleDark = () => {
 ### 模块与 TypeScript
 
 - 所有类库包仅输出 ESM，不提供 CJS / UMD；
-- 每个包的 `package.json` 须完善 `exports` 映射中的 `types` 条件（如 `"./package.json": { "types": "./dist/index.d.ts" }`
-  ），保证类型可正常导入；顶层 `types` 字段可选，用于兼容旧版编辑器；
+- 每个包的 `package.json` 须完善 `exports` 映射中的 `types` 条件（如 `"./package.json": { "types": "./dist/index.d.ts" }`），保证类型可正常导入；顶层 `types` 字段可选，用于兼容旧版编辑器；
 - TypeScript 全局开启 `strict: true`；
 - 类库包开启 `declaration` 生成 `.d.ts`；应用包（Demo）关闭类型输出，由 Vite 编译。
 
@@ -410,15 +407,12 @@ const toggleDark = () => {
 
 ### 提交规范
 
-提交 commit 时请遵循 [Conventional Commits](https://www.conventionalcommits.org/) 规范，常用前缀（`feat:` / `fix:` /
-`docs:` / `style:` / `refactor:` / `test:` / `chore:`）及示例见[贡献指南 → 提交 Pull Request](#提交-pull-request)。
+提交 commit 时请遵循 [Conventional Commits](https://www.conventionalcommits.org/) 规范，常用前缀（`feat:` / `fix:` / `docs:` / `style:` / `refactor:` / `test:` / `chore:`）及示例见[贡献指南 → 提交 Pull Request](#提交-pull-request)。
 
 ### 测试要求
 
 - 新增组件须配套单元测试；
-- 跨框架组件通过 **契约测试**保证行为一致：契约测试是对比 Vue 与 React 两侧组件在相同 props 输入下的 **输出类名、DOM
-  结构与交互行为**是否一致的专项测试，用例统一放在 `packages/frameworks/{vue,react}/__tests__/contract/`，随 `pnpm test`
-  一并运行；
+- 跨框架组件通过 **契约测试**保证行为一致：契约测试是对比 Vue 与 React 两侧组件在相同 props 输入下的 **输出类名、DOM 结构与交互行为**是否一致的专项测试，用例统一放在 `packages/frameworks/{vue,react}/__tests__/contract/`，随 `pnpm test` 一并运行；
 - 提交前须通过 `pnpm lint` 与 `pnpm test`。
 
 ---
@@ -439,15 +433,13 @@ const toggleDark = () => {
 
 以下内容涉及品牌与法律合规，发布前请逐项确认：
 
-- [ ] **锁定 npm scope**：执行 `npm org create feel-ui` 创建组织，防止 scope 被他人占用；
-- [ ] **版权行逐字核对**：`Copyright (c)` 行的公司英文名必须与营业执照一致——
-  `Anhui Jiuwen Information Technology Co., Ltd.`，不得缩写为 `Jiuwen Tech`；
+- [ ] **锁定 npm scope**：执行 `npm org create feel-ui` 注册组织，防止 scope 被他人占用；
+- [ ] **版权行逐字核对**：`Copyright (c)` 行的公司英文名必须与营业执照一致——`Anhui Jiuwen Information Technology Co., Ltd.`，不得缩写为 `Jiuwen Tech`；
 - [ ] **包名带连字符**：发布包名为 `@feel-ui/*`，同时在 README 与安装文档中保留防错提示；
 - [ ] **补齐合规文件**：`LICENSE`（含版权行）、`NOTICE`、`AUTHORS`、`CONTRIBUTING.md`（含 CLA 条款）；
 - [ ] **源码头部声明**：所有源文件添加 `SPDX-License-Identifier: MIT` 与版权行；
 - [ ] **商标检索**：在国内商标第 9 类（软件）与第 42 类（技术服务）检索「九问」与「Feel UI」，评估异议风险后再做长期品牌投入；
-- [ ] **注册防御性资产**：GitHub 组织 `github.com/feel-ui`、`github.com/jiuwen`，以及 npm scope `@jiuwen`、`@jiuwen-ui`
-  建议一并注册占位。
+- [ ] **注册防御性资产**：GitHub 组织 `github.com/feel-ui`、`github.com/jiuwen`，以及 npm scope `@jiuwen`、`@jiuwen-ui` 建议一并注册占位。
 
 > 以上任一项未完成前，不建议以正式版本号（≥ 1.0.0）对外发布。
 
