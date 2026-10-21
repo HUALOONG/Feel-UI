@@ -1,0 +1,7 @@
+{
+  "extends": "@feel-ui/tsconfig/ui.json",
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
+  "include": ["src", "vite.config.ts"]
+}

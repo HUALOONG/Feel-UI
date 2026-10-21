@@ -1,0 +1,44 @@
+{
+  "name": "@feel-ui/react",
+  "version": "0.1.0",
+  "description": "Feel UI React 19 组件库（API 与 Vue 包对齐）",
+  "type": "module",
+  "sideEffects": false,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build"
+  },
+  "dependencies": {
+    "@feel-ui/cva": "workspace:*",
+    "@feel-ui/hooks": "workspace:*",
+    "@feel-ui/utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@feel-ui/tsconfig": "workspace:*",
+    "@feel-ui/vite": "workspace:*",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8"
+  }
+}
