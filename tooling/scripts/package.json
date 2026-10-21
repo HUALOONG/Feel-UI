@@ -1,0 +1,12 @@
+{
+  "name": "@feel-ui/scripts",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Feel UI 构建/发布/部署脚本（不发布，仅项目内使用）",
+  "type": "module",
+  "bin": {
+    "feel-release": "./build/release.js",
+    "feel-deploy-docker": "./deploy/docker.js",
+    "feel-deploy-nginx": "./deploy/nginx.js"
+  }
+}

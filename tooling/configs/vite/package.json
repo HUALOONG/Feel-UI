@@ -1,0 +1,17 @@
+{
+  "name": "@feel-ui/vite",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Feel UI 统一 Vite 库打包配置模板（lib mode，纯 ESM）",
+  "type": "module",
+  "main": "index.mjs",
+  "exports": {
+    ".": "./index.mjs"
+  },
+  "dependencies": {
+    "vite-plugin-dts": "^4.2.1"
+  },
+  "peerDependencies": {
+    "vite": "^5.0.0"
+  }
+}

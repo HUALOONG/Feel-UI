@@ -1,0 +1,12 @@
+{
+  "name": "@feel-ui/tsconfig",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Feel UI 分层 TypeScript 配置（base / ui / test）",
+  "files": ["base.json", "ui.json", "test.json"],
+  "exports": {
+    "./base.json": "./base.json",
+    "./ui.json": "./ui.json",
+    "./test.json": "./test.json"
+  }
+}
