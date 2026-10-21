@@ -1,0 +1,22 @@
+# NOTICE
+
+Feel UI（栖羽）基于 MIT 许可证发布，版权归安徽九问信息科技有限公司所有。
+
+## 第三方依赖与版权归属
+
+本项目运行时与工程化所依赖的主要第三方软件包，均保留其原始许可证：
+
+| 依赖 | 用途 | 许可证 |
+| --- | --- | --- |
+| Vue 3 | Vue 组件库运行框架（peerDependency） | MIT |
+| React 19 | React 组件库运行框架（peerDependency） | MIT |
+| Vite | 库打包与应用开发 | MIT |
+| TypeScript | 类型系统与编译 | Apache-2.0 |
+| Tailwind CSS | 原子化样式 | MIT |
+| clsx | 类名合并 | MIT |
+| tailwind-merge | 类名合并冲突消除 | MIT |
+| Vitest | 单元测试 | MIT |
+| ESLint | 代码检查 | MIT |
+| VitePress | 文档站点 | MIT |
+
+完整依赖清单以各包 `package.json` 与 `pnpm-lock.yaml` 为准。

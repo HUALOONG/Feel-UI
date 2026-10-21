@@ -1,0 +1,66 @@
+# Dependencies
+node_modules/
+.pnp/
+.pnp.js
+
+# Lock files（pnpm-lock.yaml 纳入版本控制，保证可复现安装）
+
+# Build outputs
+dist/
+cache/
+*.tsbuildinfo
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# Test coverage
+coverage/
+*.lcov
+.nyc_output/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+*.suo
+*.tmp
+*.user
+
+# OS
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# pnpm / monorepo
+.pnpm-store/
+node-jit-test/
+
+# Build artifacts
+*.tgz
+*.zip
+*.tar.gz
+
+# Generated assets
+packages/design/styles/src/tokens.generated.css
+
+# Docs site cache
+.vitepress/cache/
+docs/.vitepress/cache/

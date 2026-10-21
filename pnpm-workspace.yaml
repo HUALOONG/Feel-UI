@@ -1,0 +1,10 @@
+packages:
+  - 'packages/*'
+  - 'packages/design/*'
+  - 'packages/shared/*'
+  - 'packages/frameworks/*'
+  - 'tooling/configs/*'
+  - 'docs'
+
+allowBuilds:
+  esbuild: true
