@@ -1,0 +1,4 @@
+{
+  "extends": "@feel-ui/tsconfig/ui.json",
+  "include": ["src", "vite.config.ts"]
+}

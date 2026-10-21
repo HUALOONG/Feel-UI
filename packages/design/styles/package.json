@@ -1,0 +1,47 @@
+{
+  "name": "@feel-ui/styles",
+  "version": "0.1.0",
+  "description": "Feel UI 全局样式：挂载 tokens CSS 变量、Tailwind 插件与默认样式",
+  "type": "module",
+  "sideEffects": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./plugin": {
+      "types": "./dist/plugin.d.ts",
+      "import": "./dist/plugin.js",
+      "default": "./dist/plugin.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "node scripts/gen-css.mjs && vite build"
+  },
+  "dependencies": {
+    "@feel-ui/tokens": "workspace:*"
+  },
+  "peerDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "peerDependenciesMeta": {
+    "tailwindcss": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@feel-ui/tsconfig": "workspace:*",
+    "@feel-ui/vite": "workspace:*",
+    "tailwindcss": "^3.4.13",
+    "typescript": "^5.6.2",
+    "vite": "^5.4.8",
+    "vite-plugin-css-injected-by-js": "^3.5.1",
+    "vite-plugin-dts": "^4.2.1"
+  }
+}
